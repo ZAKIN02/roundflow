@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoundFlow — Support</title>
+<style>
+  :root { --green:#22C55E; --bg:#0A0B0D; --card:#14161A; --muted:#9BA1A8; --line:#ffffff14; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:#F4F6F8; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+         line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:680px; margin:0 auto; padding:64px 24px 80px; }
+  .ring { width:72px; height:72px; border-radius:50%; border:6px solid var(--green);
+          box-shadow:0 0 28px -4px var(--green); margin-bottom:28px; position:relative; }
+  .ring::after { content:""; position:absolute; top:-7px; left:50%; transform:translateX(-50%);
+                 width:7px; height:11px; border-radius:3px; background:var(--green); }
+  h1 { font-size:34px; font-weight:800; letter-spacing:-0.5px; }
+  h1 span { color:var(--green); }
+  .tag { color:var(--muted); font-size:18px; margin-top:8px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; margin-top:32px; }
+  .card h2 { font-size:18px; margin-bottom:8px; }
+  .card p { color:var(--muted); }
+  a { color:var(--green); text-decoration:none; font-weight:600; }
+  a:hover { text-decoration:underline; }
+  .links { display:flex; gap:24px; margin-top:32px; flex-wrap:wrap; }
+  footer { color:#666C73; font-size:13px; margin-top:48px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="ring"></div>
+    <h1>Round<span>Flow</span></h1>
+    <p class="tag">The round timer that doesn't kill your music.</p>
+
+    <div class="card">
+      <h2>Support</h2>
+      <p>Questions, bugs or feedback? We'd love to hear from you.<br>
+      Email <a href="mailto:amazigh.incognito@gmail.com">amazigh.incognito@gmail.com</a> and we'll get back to you.</p>
+    </div>
+
+    <div class="card">
+      <h2>About</h2>
+      <p>RoundFlow is a boxing, martial-arts and interval (HIIT/Tabata) round timer that keeps your
+      music playing — it ducks for the bell, then hands the volume straight back. With a recorded
+      coach voice, Live Activity, Dynamic Island and an Apple Watch companion.</p>
+    </div>
+
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+
+    <footer>© 2026 RoundFlow. All rights reserved.</footer>
+  </div>
+</body>
+</html>
