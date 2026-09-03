@@ -15,50 +15,114 @@
   h1 { font-size:30px; font-weight:800; margin-bottom:6px; }
   .date { color:#666C73; font-size:14px; margin-bottom:32px; }
   h2 { font-size:18px; margin:28px 0 8px; }
+  h3 { font-size:15px; margin:16px 0 4px; color:#F4F6F8; }
   p { color:var(--muted); margin-bottom:12px; }
-  .back { display:inline-block; margin-bottom:32px; }
+  ul { color:var(--muted); margin:0 0 12px 20px; }
+  li { margin-bottom:6px; }
+  .changes { border-top:1px solid var(--line); margin-top:40px; padding-top:20px; font-size:14px; }
+  .changes p { color:#666C73; }
 </style>
 </head>
 <body>
   <div class="wrap">
     <a class="back" href="index.html">← RoundFlow</a>
     <h1>Privacy Policy</h1>
-    <div class="date">Last updated: June 2026</div>
+    <div class="date">Effective date: 2 September 2026</div>
 
-    <p>RoundFlow is built to respect your privacy. In short: <strong>we don't collect your data.</strong></p>
+    <p>RoundFlow is built to respect your privacy. In short: <strong>no accounts, no analytics, no advertising,
+    no selling of data.</strong> Almost everything stays on your device. Two features — training together in a
+    room, and the Lock Screen timer — send a small amount of data to a server we run, only while you use them, and
+    that data is deleted shortly afterwards. This page explains exactly what, why and for how long.</p>
 
-    <h2>What we collect</h2>
-    <p>Nothing. RoundFlow has no accounts, no servers and no analytics or tracking. We do not collect,
-    store, or transmit any personal information.</p>
+    <h2>What stays on your device</h2>
+    <p>Your timer profiles, settings, training history, on-device usage counters and Roadwork routes are stored
+    only on your iPhone (and synced to your Apple Watch). They are not sent to us or to anyone else.</p>
 
-    <h2>Your data stays on your device</h2>
-    <p>Your timer profiles, settings and training history are stored only on your iPhone (and synced to
-    your Apple Watch). This information never leaves your device and is never sent to us or anyone else.</p>
+    <h2>What we collect, and why</h2>
+    <p>RoundFlow has no accounts. We run a small server (a Cloudflare Worker) for the two features below. It
+    receives data only while you are using those features, and nothing it receives is used for advertising,
+    profiling or tracking, or shared with any third party.</p>
+
+    <h3>Train together (rooms)</h3>
+    <p>When you create or join a room, your phone sends the 4-digit room code, the display name you chose, an
+    app-generated random member ID, and — for the host — the round settings of the workout. While the room is
+    live your phone sends, every few seconds, your current heart rate, heart-rate zone, average heart rate,
+    Effort score and time spent in the peak zone, so the people in your room can see them. Cheers you send
+    (an emoji) are delivered to the other members the same way. This data is held only for the room and is
+    deleted from the server automatically no later than two hours after the room was created — at most two
+    hours after your session ends, and usually sooner. Nothing is kept beyond that. Leave the room to stop
+    sharing at any time.</p>
+
+    <h3>Lock Screen timer (Live Activity)</h3>
+    <p>To keep the round timer correct on your Lock Screen while your phone is locked, your phone sends a
+    Live Activity push token issued by Apple, the profile name and the round schedule (phase names and times)
+    to our server, which sends the timer updates back to your phone through Apple's push service. The token
+    identifies this Live Activity on your device only; it is not linked to you and is deleted when the
+    workout ends or the schedule is finished.</p>
+
+    <h2>Apple Health</h2>
+    <p>With your permission, RoundFlow <strong>reads</strong> heart rate (live, from your Apple Watch or a
+    connected sensor), active energy, body mass, date of birth and biological sex from Apple Health. Heart rate
+    is used to show your live heart rate and zones during a workout; the others are used to make the calorie
+    estimate accurate for you. If you turn on "Save to Apple Health", RoundFlow also <strong>writes</strong>
+    your finished workouts (type, duration and estimated active energy) to Apple Health.</p>
+    <p>Health data is processed and stored on your device. The one exception is heart rate while you are in a
+    live room, which is sent to our server as described above so your training partners can see it. Health data
+    is never used for advertising or marketing, never sold, and never shared with third parties. You can revoke
+    access at any time in the Health app or in iOS Settings; RoundFlow keeps working without it.</p>
+
+    <h2>Location</h2>
+    <p>Roadwork uses your location, only while a run is active, to draw your route and measure distance and
+    pace. Routes are stored on your device only and are never sent to us. You can revoke access in iOS
+    Settings.</p>
 
     <h2>Music & audio</h2>
     <p>RoundFlow lowers ("ducks") other apps' audio when it plays a bell or voice cue, using Apple's
     standard audio system. It does not read, access, or store your music, media library, or any data
     from other apps.</p>
 
-    <h2>Apple Health</h2>
-    <p>If you turn on "Save to Apple Health", RoundFlow writes your finished workouts (type, duration and
-    an estimated active energy) to Apple Health on your device. This is optional and off by default.
-    RoundFlow does not read any data from Apple Health, and your health data is never transmitted to us
-    or any third party — it stays on your device under your control. You can revoke access anytime in the
-    Health app or iOS Settings.</p>
-
     <h2>Purchases</h2>
     <p>RoundFlow Pro is purchased through Apple's App Store. All payments and subscription management are
     handled by Apple — we never see or store your payment details.</p>
 
+    <h2>Sharing and links</h2>
+    <p>Share cards and links you send from RoundFlow contain a public App Store link. That link may carry
+    Apple campaign parameters that let Apple count installs from shared links in aggregate; they contain no
+    personal data and cannot identify you or the person you share with.</p>
+
+    <h2>Analytics and third parties</h2>
+    <p>RoundFlow contains no third-party analytics, advertising or tracking SDKs. The app keeps a few simple
+    usage counters on your device to decide what to show you; they never leave your phone. We do not sell
+    data and do not use it for advertising.</p>
+
+    <h2>Data retention and deletion</h2>
+    <ul>
+      <li>On-device data (profiles, settings, history, routes, counters) is deleted when you delete the app.</li>
+      <li>Room data on our server is deleted automatically within two hours of the room being created.</li>
+      <li>Live Activity data on our server is deleted when the workout ends.</li>
+      <li>Health data you chose to save stays in Apple Health under your control; you can delete it in the Health app.</li>
+      <li>You can email us at any time to ask what we hold about you or to request deletion.</li>
+    </ul>
+
     <h2>Children</h2>
-    <p>RoundFlow does not collect data from anyone, including children.</p>
+    <p>RoundFlow is not directed at children and does not knowingly collect data from children. The data
+    described above is collected only when a feature is used, and is not linked to an account.</p>
 
     <h2>Changes</h2>
-    <p>If this policy changes, we'll update this page with a new date.</p>
+    <p>If this policy changes, we'll update this page with a new effective date.</p>
 
     <h2>Contact</h2>
     <p>Questions? Email <a href="mailto:amazigh.incognito@gmail.com">amazigh.incognito@gmail.com</a>.</p>
+
+    <div class="changes">
+      <h2>What changed</h2>
+      <p><strong>2 September 2026.</strong> Earlier versions of this page said RoundFlow had "no servers", that
+      data "never leaves your device", and that the app "does not read any data from Apple Health". Since the
+      Train together (rooms) and Lock Screen timer features were added, RoundFlow runs a small server for those
+      two features and reads heart rate and a few profile values from Apple Health. This version describes
+      what is sent, why, and how long it is kept. Nothing else about how we treat your data has changed: no
+      accounts, no analytics, no advertising, no selling of data.</p>
+    </div>
   </div>
 </body>
 </html>
